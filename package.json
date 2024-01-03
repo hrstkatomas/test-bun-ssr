@@ -1,0 +1,26 @@
+{
+  "name": "test-bun-ssr",
+  "module": "index.tsx",
+  "type": "module",
+  "scripts": {
+    "start": "bun run ./index.js",
+    "dev": "bun --watch index.tsx",
+    "build-watch": "bun run build -- --watch",
+    "build": "bun build ./src/hydrate.tsx --outdir ./public/dist --minify",
+    "biome": "bunx @biomejs/biome check --apply ./src/*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.4.1",
+    "bun-types": "^1.0.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.10",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
