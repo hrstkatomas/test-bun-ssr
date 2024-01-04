@@ -6,12 +6,15 @@
     "start": "bun run ./index.js",
     "dev": "bun --watch index.tsx",
     "build-watch": "bun run build -- --watch",
-    "build": "bun build ./src/hydrate.tsx --outdir ./public/dist --minify",
-    "biome": "bunx @biomejs/biome check --apply ./src/*"
+    "build": "bun build ./src/hydrate.tsx --outdir ./public/dist",
+    "biome": "bunx @biomejs/biome check --apply ./src/*",
+    "tailwind": "bunx tailwindcss -i ./src/input.css -o ./public/dist/output.css --watch"
   },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
-    "bun-types": "^1.0.4"
+    "bun-types": "^1.0.4",
+    "react-reverse-portal": "^2.1.1",
+    "tailwindcss": "^3.4.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
